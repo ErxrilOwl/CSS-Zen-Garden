@@ -1,0 +1,746 @@
+@font-face{
+	font-family: 'Alien League';
+	src: url('../fonts/ALIEN5.TTF') format('truetype');
+}
+
+body{
+	font-family: 'Alien League';
+	color: black;
+	background-color: #111111;
+}
+
+
+/* Curtain Effect*/	
+	.curtain {
+	  width: 100%;
+	  height: 100vh;
+	  overflow: hidden;
+	}
+  
+	.curtain__wrapper {
+	  width: 100%;
+	  height: 100%;
+	}
+	      
+	.curtain__panel {
+	  background: #141414;
+	  width: 50%;
+	  height: 100vh;
+	  float: left;
+	  position: relative;
+	  z-index: 2;
+	}
+
+	.curtain__content {
+	  background: #333;
+	  background-image: url("../images/superman.jpg");
+	  background-repeat: no-repeat;
+	  background-size: 100% 100%;
+	  position: absolute;
+	  z-index: 1;
+	  width: 100%;
+	  height: 100%;
+	}
+
+	input[type=checkbox]{
+		position: absolute;
+		cursor: pointer;
+		width: 100%;
+		height: 100%;
+		z-index: 100;
+		opacity: 0;
+	}
+
+	input[type=checkbox]:checked ~ div.curtain__panel--left{
+		transform: translateX(0);
+	}
+
+	input[type=checkbox]:checked ~ div.curtain__panel--right{
+		transform: translateX(0);
+	}
+
+	.curtain__panel{
+		background: #141414;
+		width: 50%;
+		height: 100vh;
+		float: left;
+		position: relative;
+		z-index: 2;
+		transition: all 1.5s ease-out;
+	}
+
+	.curtain__panel--left{
+		transform: translateX(-100%);
+		background-image: url("../images/JL-left.png");
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+	}
+
+	.curtain__panel--right{
+		transform: translateX(100%);
+		background-image: url("../images/JL-right.png");
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+	}
+
+
+	.main-header-left, .sub-header-left, .click{
+	padding-right: 5px;
+	text-align: right;
+
+	}
+
+	.main-header-right, .sub-header-right{
+		margin-left: 5px;
+	}
+
+
+	.curtain__panel--left .outer, .curtain__panel--right .outer{
+			display: table;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+	}
+
+	.curtain__panel--left .middle, .curtain__panel--right .middle{
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.curtain__panel--left .inner, .curtain__panel--right .inner{
+		/*Do some code later*/
+	}
+
+
+	.curtain__panel .header-title{
+		background-color: white;
+		padding: 3em;
+		opacity: .65;
+		height: 300px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.curtain__panel--left .header-title{
+		/*margin-left: 40%;*/
+		margin-right: -.25px;
+	}
+
+	.curtain__panel--right .header-title{
+		/*margin-right: 40%;*/
+		margin-left: -.25px;
+	}
+
+	.header-title h1, .header-title h2{
+		font-size: 3em;
+	}
+/* End of Curtain Effect*/
+
+
+/* Contents Code*/
+
+.curtain__content .content-1{
+	background-color: white;
+	opacity: 0.65;
+	border: 1px solid: white;
+	border-radius: 4em 1em 4em 1em;
+	width: 50%;
+	padding: 30px;
+	height: 80%;
+	margin: 10%;
+	margin-top: 5%;
+	font-size: 2em;
+
+}
+
+.curtain__content .content-1 p{
+	margin-top: 10%;
+
+}
+
+.curtain__content .content-2, .curtain__content .content-3, .curtain__content .content-4,
+ .curtain__content .content-5, .curtain__content .content-6, .curtain__content .content-7{
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+  	background-attachment: fixed;
+  	background-position: center;
+  	height: 100%;
+}
+
+
+.curtain__content .content-2 .content-2-1, .curtain__content .content-3 .content-3-1, .curtain__content .content-4 .content-4-1,
+ .curtain__content .content-5 .content-5-1, .curtain__content .content-6 .content-6-1
+ {
+	background-color: white;
+	opacity: 0.65;
+	border: 1px solid: white;
+	padding: 30px;
+	padding-top: 10px;
+}
+
+.curtain__content .content-2{
+	margin: 0;
+	background-image: url("../images/flash.jpg");
+}
+
+ .curtain__content .content-2 .content-2-1{
+	width: 50%;
+	padding: 30px;
+	padding-top: 10px;
+	height: 80%;
+	margin: 10%;
+	margin-top: 5%;
+	font-size: 2em; 	
+ }
+
+.curtain__content .content-2 .content-2-1 h3{
+	font-size: 1.2em;
+	margin-bottom: 20px;
+}
+
+.curtain__content .content-2 .content-2-1 p{
+	font-size: .7em;
+	text-align: justify;
+}
+
+.curtain__content .content-3{
+	margin: 0;
+	background-image: url("../images/batman.jpg");
+}
+
+.curtain__content .content-3 .content-3-1{
+	position: absolute;
+	margin-top: 10%;
+	width: 55%;
+}
+
+.curtain__content .content-3 .content-3-1 h3{
+	font-size: 2em;
+	margin-bottom: 20px;
+}
+
+.curtain__content .content-3 .content-3-1 p{
+	font-size: 1.2em;
+	text-align: justify;
+}
+
+.curtain__content .content-4{
+	margin: 0;
+	background-image: url("../images/wonderwoman.jpg");
+}
+
+.curtain__content .content-4 .content-4-1{
+	width: 50%;
+	padding: 30px;
+	padding-top: 10px;
+	height: 80%;
+	margin: 10%;
+	margin-top: 5%;	
+	border-radius: 30px 0px 30px 0px;
+}
+
+.curtain__content .content-4 .content-4-1 h3{
+	font-size: 1.7em;
+	margin-bottom: 20px;
+}
+
+.curtain__content .content-4 .content-4-1 p{
+	font-size: 1.2em;
+	text-align: justify;
+}
+
+.curtain__content .content-5{
+	margin: 0;
+	background-image: url("../images/aquaman.jpg");
+}
+
+.curtain__content .content-5 .content-5-1{
+	width: 50%;
+	padding: 30px;
+	padding-top: 10px;
+	height: 70%;
+	margin: 10%;
+	margin-top: 5%;	
+	border-radius: 0px 0px 100px 100px;
+}
+
+.curtain__content .content-5 .content-5-1 h3{
+	font-size: 2.2em;
+	margin-bottom: 20px;
+}
+
+.curtain__content .content-5 .content-5-1 p{
+	font-size: 1.7em;
+	text-align: justify;
+}
+
+.curtain__content .content-6{
+	margin: 0;
+	background-image: url("../images/greenlantern.jpg");
+}
+
+.curtain__content .content-6 .content-6-1{
+	width: 50%;
+	padding: 30px;
+	padding-top: 10px;
+	height: 100%;
+	margin: 10%;
+	margin-top: 5%;	
+}
+
+.curtain__content .content-6 .content-6-1 h3{
+	font-size: 1.6em;
+	margin-bottom: 20px;
+}
+
+.curtain__content .content-6 .content-6-1 p{
+	font-size: 1.1em;
+	text-align: justify;
+}
+
+.curtain__content .content-7{
+	margin: 0;
+	text-align: center;
+}
+
+.curtain__content footer{
+	font-size: 2em;
+	margin: 5px;
+	padding-top: 10px;
+}
+
+.curtain__content footer > a{
+	color: white;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.curtain__content aside{
+	color: white;
+}
+
+.curtain__content aside  ul{
+	list-style: none;
+}
+
+.content-7-1  a{
+	padding:10px;
+	background-size: 50px 50px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.content-7-1 .zen-validate-html{
+	background-image: url("../images/html5.png");
+	color: transparent;
+	background-size: 53px 55px;
+	padding-right: 0px;
+}
+
+.content-7-1 .zen-validate-css{
+	background-image: url("../images/css3.png");
+	color: transparent;	
+	background-size: 60px 50px;
+	padding: 10px;
+	padding-left: 0px;
+}
+
+.content-7-1 .zen-license{
+	background-image: url("../images/cc.png");
+	color: transparent;	
+	background-size: 50px 55px;
+	padding: 10px;
+	padding-left: 15px;
+}
+
+.content-7-1 .zen-accessibility{
+	background-image: url("../images/question.png");
+	color: transparent;	
+	background-size: 48px 53px;
+	padding: 10px;	
+}
+
+.content-7-1 .zen-github{
+	background-image: url("../images/github.png");
+	color: transparent;	
+	background-size: 49px 49px;
+	padding: 10px;		
+}
+
+aside{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 60px;
+	background-color: white;
+	opacity: 0.7;
+	height: 400px;
+}
+
+aside .block1, aside .block2, aside .block3{
+	font-size: 1.3em;
+	border: 10px solid #111111;
+	text-align: left;
+	height: 400px;
+	float: left;
+	width: 33.3%;
+	padding-left: 50px;
+	color: black;
+}
+
+.block1 ul a{
+	color: red;
+}
+
+.block2 ul a{
+	color: #F1C40F;
+}
+
+/*Code for responsive design*/
+
+@media (min-width: 1200px){
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+	.curtain__content .content-5 .content-5-1 h3{
+		font-size: 2em;
+		margin-bottom: 20px;
+	}
+
+	.curtain__content .content-5 .content-5-1 p{
+		font-size: 1.6em;
+		text-align: justify;
+	}
+
+	.curtain__content .content-6 .content-6-1{
+		width: 60%;
+	}
+
+	.curtain__content .content-6 .content-6-1 h3{
+		font-size: 1.4em;
+		margin-bottom: 20px;
+	}
+
+	.curtain__content .content-6 .content-6-1 p{
+		font-size: 1em;
+		text-align: justify;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+	.curtain__content .content-2 .content-2-1{
+		width: 55%;
+		margin: 8%;
+	}
+
+	.curtain__content .content-2 .content-2-1 h3{
+		font-size: 1.1em;
+		margin-bottom: 20px;
+	}
+
+	.curtain__content .content-2 .content-2-1 p{
+		font-size: .6em;
+		text-align: justify;
+	}
+
+	.curtain__content .content-3 .content-3-1{
+		margin-top: 5%;
+		width: 62%;
+	}
+
+	.curtain__content .content-4 .content-4-1{
+		width: 60%;
+		margin: 8%;
+	}
+
+	.curtain__content .content-4 .content-4-1 h3{
+		font-size: 1.5em;
+		margin-bottom: 20px;
+	}
+
+	.curtain__content .content-4 .content-4-1 p{
+		font-size: 1em;
+		text-align: justify;
+	}
+
+	.curtain__content .content-5 .content-5-1{
+		width: 60%;
+		margin: 5%;
+	}
+
+	.curtain__content .content-5 .content-5-1 h3{
+		font-size: 2em;
+		margin-bottom: 20px;
+	}
+
+	.curtain__content .content-5 .content-5-1 p{
+		font-size: 1.5em;
+		text-align: justify;
+	}
+
+	.curtain__content .content-6 .content-6-1{
+		width: 80%;
+		margin: 2%;
+	}
+
+	.curtain__content .content-6 .content-6-1 h3{
+		font-size: 1.3em;
+		margin-bottom: 20px;
+	}
+
+	.curtain__content .content-6 .content-6-1 p{
+		font-size: 1em;
+		text-align: justify;
+	}
+
+	aside .block1, aside .block2, aside .block3{
+		font-size: 1.1em;
+		padding-left: 20px;
+		border: 8px solid #111111;
+	}
+}
+
+@media (min-width: 550px) and (max-width: 767px){
+	.curtain__content .content-1 p{
+		margin-top: 8%;
+		font-size: .8em;
+	}
+
+	.curtain__content .content-2 .content-2-1{
+		width: 63%;
+		margin: 3%;
+		padding-top: 13px;
+
+	 }
+
+	.curtain__content .content-2 .content-2-1 h3{
+		font-size: 1em;
+		margin-bottom: 20px;
+	}
+
+	.curtain__content .content-2 .content-2-1 p{
+		font-size: .5em;
+		text-align: justify;
+	}
+
+	.curtain__content .content-3 .content-3-1{
+		margin-top: 4%;
+		width: 65%;
+	}
+
+	.curtain__content .content-3 .content-3-1 h3{
+		font-size: 1.9em;
+		margin-bottom: 20px;
+	}
+
+	.curtain__content .content-3 .content-3-1 p{
+		font-size: 1.1em;
+		text-align: justify;
+	}
+
+	.curtain__content .content-4 .content-4-1{
+		width: 67%;
+		margin: 4%;
+	}
+
+	.curtain__content .content-4 .content-4-1 h3{
+		font-size: 1.3em;
+		margin-bottom: 20px;
+	}
+
+	.curtain__content .content-4 .content-4-1 p{
+		font-size: .9em;
+		text-align: justify;
+	}
+
+	.curtain__content .content-5 .content-5-1{
+		width: 73%;
+		margin: 2%;
+	}
+
+	.curtain__content .content-5 .content-5-1 h3{
+		font-size: 1.6em;
+		margin-bottom: 20px;
+	}
+
+	.curtain__content .content-5 .content-5-1 p{
+		font-size: 1.3em;
+		text-align: justify;
+	}
+
+	.curtain__content .content-6 .content-6-1{
+		width: 88%;
+		margin: 1%;
+		padding: 20px;
+		padding-top: 8px;
+	}
+
+	.curtain__content .content-6 .content-6-1 h3{
+		font-size: 1.2em;
+		margin-bottom: 20px;
+	}
+
+	.curtain__content .content-6 .content-6-1 p{
+		font-size: .85em;
+		text-align: justify;
+	}
+
+	aside .block1, aside .block2, aside .block3{
+		font-size: 1em;
+		height: 450px;
+		float: left;
+		width: 33.3%;
+		padding-left: 8px;
+	}
+
+	aside .block1 h3, aside .block2 h3, aside .block3 h3{
+		font-size: 1.2em;
+	}
+}
+
+@media (max-width: 549px){
+	.curtain__panel .header-title{
+		padding-top: 50px;
+		font-size: .6em;
+	}
+
+	.curtain__content .content-1 p{
+		margin-top: 5%;
+		font-size: .5em;
+		padding-top: 10px;
+	}
+
+	.curtain__content .content-2 .content-2-1{
+		width: 70%;
+		margin: 2%;
+		padding: 15px;
+		padding-top: 30px;
+
+	 }
+
+	.curtain__content .content-2 .content-2-1 h3{
+		font-size: .7em;
+		margin-bottom: 20px;
+	}
+
+	.curtain__content .content-2 .content-2-1 p{
+		font-size: .4em;
+		text-align: justify;
+	}
+
+	.curtain__content .content-3 .content-3-1{
+		margin-top: 8%;
+		width: 80%;
+	}
+
+	.curtain__content .content-3 .content-3-1 h3{
+		font-size: 1.5em;
+		margin-bottom: 20px;
+	}
+
+	.curtain__content .content-3 .content-3-1 p{
+		font-size: .9em;
+		text-align: justify;
+	}
+
+	.curtain__content .content-4 .content-4-1{
+		width: 75%;
+		margin: 2%;
+	}
+
+	.curtain__content .content-4 .content-4-1 h3{
+		font-size: 1.1em;
+		margin-bottom: 20px;
+	}
+
+	.curtain__content .content-4 .content-4-1 p{
+		font-size: .7em;
+		text-align: justify;
+	}
+
+	.curtain__content .content-5 .content-5-1{
+		width: 75%;
+		margin: 2%;
+		height: 81%;
+	}
+
+	.curtain__content .content-5 .content-5-1 h3{
+		font-size: 1.5em;
+		margin-bottom: 20px;
+	}
+
+	.curtain__content .content-5 .content-5-1 p{
+		font-size: 1.2em;
+		text-align: justify;
+	}
+
+	.curtain__content .content-6 .content-6-1{
+		width: 90%;
+		margin: 1%;
+		padding: 15px;
+		padding-top: 8px;
+	}
+
+	.curtain__content .content-6 .content-6-1 h3{
+		font-size: 1em;
+		margin-bottom: 20px;
+	}
+
+	.curtain__content .content-6 .content-6-1 p{
+		font-size: .7em;
+		text-align: justify;
+	}
+
+	.content-7-1 .zen-validate-html{
+		background-size: 38px 40px;
+		padding-right: 0px;
+	}
+
+	.content-7-1 .zen-validate-css{
+		background-image: url("../images/css3.png");
+		color: transparent;	
+		background-size: 45px 35px;
+		padding: 4px;
+		padding-left: 0px;
+	}
+
+	.content-7-1 .zen-license{
+		background-image: url("../images/cc.png");
+		color: transparent;	
+		background-size: 35px 40px;
+		padding: 4px;
+		padding-left: 15px;
+	}
+
+	.content-7-1 .zen-accessibility{
+		background-image: url("../images/question.png");
+		color: transparent;	
+		background-size: 33px 38px;
+		padding: 4px;	
+	}
+
+	.content-7-1 .zen-github{
+		background-image: url("../images/github.png");
+		color: transparent;	
+		background-size: 34px 34px;
+		padding: 4px;		
+	}
+
+
+	aside .block1, aside .block2, aside .block3{
+		font-size: .7em;
+		height: 460px;
+		border: 3px solid #111111;
+		float: left;
+		width: 33.3%;
+		padding-left: 2px;
+	}
+
+	aside .block1 h3, aside .block2 h3, aside .block3 h3{
+		font-size: .9em;
+	}
+
+}
+/*End of Code for responsive design*/
